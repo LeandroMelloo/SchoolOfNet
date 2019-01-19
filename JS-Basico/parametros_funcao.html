@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Document</title> 
+    </head>
+    <body>
+        <script>
+            function number(totalSoma) {
+                return totalSoma + totalSoma
+            }
+
+            var resultado = number(5) // variavel resultado -> utilizo o retorno da função number e adiciono o valor 5.
+                alert('Resultado da soma: ' + resultado)
+        </script>
+<!------------------------------------Utilizando a variavel de escopo global e escopo individual-------------------->
+        <script>
+            var totalSoma = 5 // variavel totalSoma está fora do escopo global, então é descartada.
+
+            function number(totalSoma) {
+                return totalSoma + totalSoma
+            }
+    
+            var resultado = number(3) // variavel resultado -> utiliza o retorno da função number e adiciono o valor 3, pois está detro da chamada do escopo global.
+                alert('Resultado da soma: ' + resultado)
+        </script>
+<!------------------------------------Utilizando a variavel de escopo global e escopo individual-------------------->
+        <script>
+            var totalSoma = 5 // variavel totalSoma está fora do escopo global, então é descartada.
+
+            function number(totalSoma) {
+                var totalSoma = 4 // variavel totalSoma será utilizada, pois está dentro do escopo global neste caso.
+                return totalSoma + totalSoma
+            }
+
+            var resultado = number(3) // variavel resultado -> utiliza o retorno da função number, porém será descartada pois já existe uma variavel dentro do escopo global.
+                alert('Resultado da soma: ' + resultado)
+        </script>
+<!------------------------------------Utilizando a variavel de escopo global e escopo individual-------------------->
+        <script>
+            var totalSoma = 5 // variavel totalSoma será reescrita pelo valor 10.
+            var totalSoma = 10 // variavel totalSoma será utilizada reescrevendo a declaração inicial.
+
+            function number(totalSoma) {
+                return totalSoma + totalSoma
+            }
+
+            var resultado = number(totalSoma) // variavel resultado -> utiliza o retorno da função number, e será introduzido o valor da variavel somaTotal.
+                alert('Resultado da soma: ' + resultado)
+        </script>
+    </body>
+</html>

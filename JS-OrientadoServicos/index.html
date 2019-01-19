@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Document</title> 
+    </head>
+    <body>
+        <p>OOP JavaScript</p>
+        <script>
+            // definindo por paramêtros os valores que virão setados na classe 'Person'.
+            function Person(_name, _age, _heigth) {
+//------------------> atributo privado e definindo os parâmetros por variaveis<-------------------//                
+                var name = _name;
+                var age = _age;
+                var heigth = _heigth;
+//--------------------------------> função dentro da classe Person <------------------------------//
+                this.initialize = function() {
+                    console.log('Init function!')
+                }
+                this.sayhello = function(name){
+                    console.log('Hello, ' + name + '!');
+                }
+                this.hello = function hello(name){
+                    console.log('Hello, ' + name + '!')
+                }
+//---------------------------------> encapsulamento GET and SET <---------------------------------//                
+                this.getName = function getName(){
+                    return name;
+                }
+                this.setName = function setName(_name){
+                    name = _name;
+                }
+                this.getAge = function getAge(){
+                    return age;
+                }
+                this.setAge = function setAge(_age){
+                    age = _age;
+                }
+                this.getHeigth = function getHeigth(){
+                    return heigth;
+                }
+                this.setHeigth = function setHeigth(_heigth){
+                    heigth = _heigth;
+                }
+            }
+//---> Utilizando minha classe 'Person', em métodos estaticos com o argumento 'static_method' <-----//
+            Person.static_method = function () {
+                console.log('Método estatico');
+            }
+
+            Person.static_method()
+            Person.static_attr = 'Estatico método';  
+                console.log(Person.static_attr);
+
+            // instânciando um objeto 'Person' para dentro da minha variavel 'teste' e inserindo valores como parâmetros.
+            var teste = new Person('Leandro', 33, 1.90); 
+            teste.sayhello(teste.getName());
+                console.log(teste);
+
+        </script>
+    </body>
+</html>

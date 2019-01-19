@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Document</title> 
+    </head>
+    <body>
+        <script>
+            console.time()
+            var i = 0
+            var str = ''
+
+            while (i <= 5) {
+                if(i <= 3) {
+                    console.log('Is less than 5')
+                } else {
+                    str += i
+                }
+                i++ // incrementar até chegar a 5.
+            }
+            console.log(str)
+            console.log('Script running')
+            console.timeEnd()
+        </script>
+
+        <script>
+            console.time()
+            var i = 0
+            var str = ''
+
+            do {
+                if(i <= 3) {
+                    console.log('Is less than 5')
+                } else {
+                    str += i
+                }
+                i++ // incrementar até chegar a 5.
+            } while (i <= 5) // valida a operação.
+
+            console.log(str)
+            console.log('Script running')
+            console.timeEnd()
+
+        </script>
+    </body>
+</html>

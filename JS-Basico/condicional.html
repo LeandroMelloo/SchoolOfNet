@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Document</title> 
+    </head>
+    <body>
+        <script>
+            if((10 > 2 || 200 < 10)) {
+                console.log('True')
+            } else {
+                console.log('False')
+            }
+
+            var n1 = prompt('Numero 1 :')
+            var n2 = prompt('Numero 2 :')
+            var op = prompt('Tipo Operação :')
+
+            n1 = parseFloat(n1)
+            n2 = parseFloat(n2)
+
+            if(op == '+'){
+                alert(n1 + n2)
+            } else if (op == '-'){
+                alert(n1 - n2)
+            } else if (op == '*') {
+                alert(n1 * n2)
+            } else if (op == '/') {
+                alert(n1 / n2)
+            } else if (op == '%') {
+                alert(n1 % n2)
+            } else {
+                alert('Operação não existe!!!')
+            }
+        </script>
+    </body>
+</html>

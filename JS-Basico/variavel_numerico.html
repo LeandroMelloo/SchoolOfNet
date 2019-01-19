@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Document</title> 
+    </head>
+    <body>
+        <script>
+            var double = 10.00 // variavel do tipo ponto fluante.
+
+            double.toString() // converte a variavel number do tipo ponto fluante, para string saída '10.00' ou "10.00".
+
+            alert(double)
+
+            var inteiro = 9.20 // variavel do tipo ponto fluante.
+
+            inteiro = parseInt(inteiro) // converte a variavel inteiro do tipo ponto fluante, para inteiro.
+
+            alert(inteiro) // saída da variavel do tipo inteiro, 9 ele ignora tudo depois do ponto(.20).
+
+            var ponto_flutuante = 5 // variavel do tipo inteiro.
+
+            ponto_flutuante = parseFloat(ponto_flutuante).toPrecision(3) // parse float() -> converte a variavel do tipo inteiro, para ponto fluante e toPrecision -> acrescenta duas casas decimais contando apartir do ponto.
+
+            alert(ponto_flutuante) // saída da variavel do tipo inteiro, 5 pois não obtém casas depois do ponto.
+
+            var random = Math.round(Math.random() * 6) // Math.random -> gera números aleatorios, Math.round -> arendonda este números aleatorios e múltiplica por 6 e nunca passaram de 6.
+
+            alert(random) // saída da variavel será números aleatorios, e nunca passaram de 6.
+
+            var trunc = Math.trunc(Math.random()) // Math.random -> gera números aleatorios, Math.trunc -> trunca estes números aleatorios e não passaram de 0.
+
+            alert(trunc) // saída da variavel será números aleatorios truncados.
+
+            var pi = Math.PI // Math.PI -> gera o número de PI.
+
+            alert(pi) // saída da variavel será PI.
+
+        </script>
+    </body>
+</html>
