@@ -12,7 +12,7 @@ fs.readFile('data.txt', function(erro, data) {
     if(erro) {
         throw erro;
     }
-    console.log(data.toString('utf8'));
+        console.log(data.toString('utf8'));
 });
 
 // fs.readdir -> lista todos os diretorios do projeto.
@@ -24,3 +24,11 @@ fs.readdir('./../../Node-Basico', function(erro, files) {
         console.log(files[file]);
     }
 })
+
+// fs.readdirSync -> ler os diretorios de forma assincrona.
+fs.readdirSync('./../http').filter(function(file) {
+    return (file.endsWith('.js'))// listar todos os arquivos com final .js, através do endsWith.
+    })
+    .forEach(function(file) {
+        console.log(file);
+    });
