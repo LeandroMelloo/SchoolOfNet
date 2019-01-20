@@ -5,6 +5,18 @@
         <title>HelloWorld</title> 
     </head>
     <body>
-        <h1>Hello Wold!!!</h1>
+        <h1>Hello from Wold!!!</h1>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var io = io.connect();
+
+            io.emit('init', { name: 'Leandro Mello', number: 1}, function(data) {
+                console.log('Resposta data: ', data.message, data)
+            }); //request Websocket.
+
+            /*io.on('index:say_hello', function(data) {
+                console.log('Data: ', data);
+            });*/
+        </script>
     </body>
 </html>
